@@ -1,47 +1,34 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablice</title>
-</head>
-<body>
-    <header><h1>Tablice</h1></header>
-    <script>
-        
-        const numbers = [23, 11, 5]
-        
-        // numbers(0) = [23] 
-        // numbers(0) = [11]
-        // numbers(0) = [5] 
-
-        // numbers[0] = 3 // zmieni wartość indeksu 0 z 23 na 3 
-        
-        document.write(`<p>Elementy tablicy: ${numbers} </p>`)
-        document.write("<p>Długość tablicy: "+numbers.length+"</p>")
-        document.write(`<p>Długość tablicy: ${numbers.length} </p>`)
-        
-        document.write(`Usuwam pierwszy element tablicy czyli: ${numbers.shift()} </p>`)
-        document.write(`<p>Długość tablicy po usunięciu pierwszego elementu: ${numbers.length} </p>`)
-        document.write(`<p>Elementy tablicy: ${numbers} </p>`)
-
-        document.write(`Usuwam ostatni element tablicy czyli: ${numbers.pop()} </p>`)
-        document.write(`<p>Długość tablicy po usunięciu ostatniego elementu: ${numbers.length} </p>`)
-        document.write(`<p>Elementy tablicy: ${numbers} </p>`)
-
-        document.write(`<p>Dodaję element na początku tablicy: ${numbers.unshift(6)} </p>`)
-        document.write(`<p>Długość tablicy: ${numbers.length} </p>`)
-        document.write(`<p>Elementy tablicy: ${numbers} </p>`)
-
-        document.write(`<p>Dodaję element na końcu tablicy: ${numbers.push(60)} </p>`)
-        document.write(`<p>Długość tablicy: ${numbers.length} </p>`)
-        document.write(`<p>Elementy tablicy: ${numbers} </p>`)
-
-        document.write(`<p>Dodaję element na końcu tablicy z użyciem numbers.lenght: ${numbers[numbers.length]=20} </p>`)
-        document.write(`<p>Długość tablicy: ${numbers.length} </p>`)
-        document.write(`<p>Elementy tablicy: ${numbers} </p>`)
-
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funkcje w JS</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Funkcje w JS</h1>
+      </header>
+      <main>
+        <script>
+          //document.write('Tu będzie wynik działania kodu')
+          function printGreeting() {
+            let userName = prompt("Podaj swoję imię: ");
+            
+            if (userName) {
+              document.write(`Witaj, ${userName}`);
+            } else {
+              document.write("Witaj, nieznajomy");
+            }
+          }
+          printGreeting();
+        </script>
+      </main>
+      <footer>
+        <p>&copy; Me XXI c.</p>
+      </footer>
+    </div>
+  </body>
 </html>

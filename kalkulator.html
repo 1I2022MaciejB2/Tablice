@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funkcje w JS</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Kalkulator w JS</h1>
+      </header>
+      <main>
+        <script>
+          //document.write('Tu będzie wynik działania kodu')
+          function kalkulator() {
+            let l1 = parseFloat(prompt("Podaj pierwszą liczbę: "));
+            if (isNaN(l1)) {
+              alert("To nie liczba");
+              return;
+            }
+            let l2 = parseFloat(prompt("Podaj drugą liczbę: "));
+            if (isNaN(l2)) {
+              alert("To nie liczba");
+              return;
+            }
+            let operacja = prompt("Podaj operację (+, -, *, /): ");
+            let wynik;
+            switch (operacja) {
+              case "+":
+                wynik = l1 + l2;
+                break;
+              case "-":
+                wynik = l1 - l2;
+                break;
+              case "*":
+                wynik = l1 * l2;
+                break;
+              case "/":
+                if (l2 == 0) {
+                  alert("Tak to nie można kolego");
+                  break;
+                } else {
+                  wynik = l1 / l2;
+                  break;
+                }
+            }
+            alert(`Wynik: ${wynik}`);
+          }
+          kalkulator();
+        </script>
+      </main>
+      <footer>
+        <p>&copy; Me XXI c.</p>
+      </footer>
+    </div>
+  </body>
+</html>
